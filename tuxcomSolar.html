@@ -4,82 +4,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="../tuxcomSolar/img/logo/tuxcomlogo.png">
-    <link rel="stylesheet" href="../tuxcomSolar/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../tuxcomSolar/css/buttons.css">
+    <link rel="icon" type="image/svg+xml" href="../tuxcomSolar/img/logo/tuxcomlogo.png"><!--Logo de la pestaña-->
+    <link rel="stylesheet" href="../tuxcomSolar/bootstrap/css/bootstrap.min.css"><!--Bootstrap local-->
+    <link rel="stylesheet" href="../tuxcomSolar/css/buttons.css"><!--Hojas de estilos-->
     <link rel="stylesheet" href="../tuxcomSolar/css/text_style.css">
     <link rel="stylesheet" href="../tuxcomSolar/css/background.css">
+    <link rel="stylesheet" href="../tuxcomSolar/css/map.css">
     <title>Tuxcom Solar</title>
 </head>
 
 <body class="p-1 bg-tuxcom">
-    <nav class="navbar navbar-expand-lg p-4 mb-4">
+    <nav class="navbar navbar-expand-lg p-2 mb-2"><!--Este banner contiene el Logo y botones-->
         <div class="container-fluid">
-            <a class="navbar-brand nav-link" href="http://www.tuxcom.net.mx/">
+            <a class="navbar-brand nav-link" href="#">
                 <img class="w-50 rounded-4 p-2 bg-success-subtle" src="../tuxcomSolar/img/logo/tuxcom.png"></a>
             <button class="navbar-toggler btn-nav" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+                aria-label="Toggle navigation"><!--Este boton es responsivo-->
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse p-2" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link">
                             <button type="button" class="btn btn-info btn-gral" data-bs-toggle="modal"
                                 data-bs-target="#modalContacts"><img
-                                    src="../tuxcomSolar/img/icons/person-lines-fill.svg"> Contactos</button></a>
+                                    src="../tuxcomSolar/img/icons/person-lines-fill.svg">
+                                <b>Contactos</b>
+                            </button>
+                        </a><!--Botón para abrir el modal de contactos-->
                         <div class="modal fade" id="modalContacts" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true"><!-- Modal Contacts-->
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
+                            aria-hidden="true"><!--Formato del modal-->
+                            <div class="modal-dialog"><!--Modal tipo dialogo-->
+                                <div class="modal-content"><!--Muestra el modal-->
+                                    <div class="modal-header"><!--Encabezado del modal-->
                                         <h1 class="modal-title fs-5" id="modalContacts">Comunícate con nosotros</h1>
                                     </div>
-                                    <div class="modal-body text-center"><!--Modal body-->
-                                        <table class="text-center" style="margin-left: 5%;">
+                                    <div class="modal-body text-center"><!--Contenido del modal-->
+                                        <table class="text-center" style="margin: 0 auto;"><!--Tabla dentro del modal-->
                                             <tr>
-                                                <td>
+                                                <td class="w-25">
                                                     <a href="tel:522871820331">
                                                         <button class="btn btn-gral btn-outline-dark">
                                                             <img src="../tuxcomSolar/img/icons/headset.svg">
-                                                            Marca</button>
+                                                            <b>Llama</b></button><!--Redirecciona a la llamada-->
                                                     </a>
                                                 </td>
-                                                <td>
-                                                    <button class="btn btn-gral btn-outline-primary">
-                                                        <img src="../tuxcomSolar/img/icons/envelope-at-fill.svg">
-                                                        Correo</button>
-                                                </td>
-                                                <td>
+                                                <!--Button EMail is pending-->
+                                                <td class="w-25">
                                                     <a href="https://wa.me/522871820331">
                                                         <button class="btn btn-gral btn-outline-success">
                                                             <img src="../tuxcomSolar/img/icons/whatsapp.svg">
-                                                            WhatsApp</button>
+                                                            <b>WhatsApp</b></button><!--Redirecciona a cuenta dw Whats-->
                                                     </a>
                                                 </td>
-                                                <td>
-                                                    <button class="btn btn-gral btn-outline-info">
-                                                        <img src="../tuxcomSolar/img/icons/messenger.svg">
-                                                        Messenger</button>
-                                                </td>
+                                                <!--Button Messenger is pending-->
                                             </tr>
                                         </table>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger btn-gral" data-bs-toggle="modal"
-                                            data-bs-target="modalContacts">Regresar</button>
+                                        <button type="button" class="btn btn-danger btn-gral"
+                                            data-bs-dismiss="modal"><b>Regresar</b></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="nav-link">
+                            <button type="button" class="btn btn-info btn-gral" data-bs-toggle="modal"
+                                data-bs-target="#modalDir"><img src="../tuxcomSolar/img/icons/geo-alt-fill.svg">
+                                <b>Ubicación</b>
+                            </button>
+                        </a><!--Boton para abrir Ubicación-->
+                        <div class="modal fade" id="modalDir" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true"><!--Formato del modal-->
+                            <div class="modal-dialog"><!--Modal tipo dialogo-->
+                                <div class="modal-content"><!--Muestra el modal-->
+                                    <div class="modal-header"><!--Encabezado del modal-->
+                                        <h1 class="modal-title fs-5" id="modalDir">Ubicanos:</h1>
+                                    </div>
+                                    <div class="modal-body text-center"><!--Contenido del modal-->
+                                        Av. 3, entre Calle 1 y Calle 2, Fraccionamiento Costa Verde, 68370, San Juan Bautista Tuxtepec, Oax., Méx.</p>
+                                        <div class="map-res mb-4">
+                                            <iframe
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2255.062845994515!2d-96.12917723018846!3d18.092443415137318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c3e68a948a0d27%3A0xf0aa8b92e780ec32!2sCosta%20Verde%2C%20San%20Juan%20Bautista%20Tuxtepec%2C%20Oax.!5e0!3m2!1ses!2smx!4v1731346780754!5m2!1ses!2smx"
+                                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger btn-gral"
+                                            data-bs-dismiss="modal"><b>Regresar</b></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="nav-link">
+                            <button type="button" class="btn btn-info btn-gral" data-bs-toggle="modal"
+                                data-bs-target="#modalAbout"><img
+                                    src="../tuxcomSolar/img/icons/file-earmark-person.svg">
+                                <b>Acerca De</b>
+                            </button>
+                        </a><!--Boton para abrir Acerca De-->
+                        <div class="modal fade" id="modalAbout" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true"><!--Formato del modal-->
+                            <div class="modal-dialog"><!--Modal tipo dialogo-->
+                                <div class="modal-content"><!--Muestra el modal-->
+                                    <div class="modal-header"><!--Encabezado del modal-->
+                                        <h1 class="modal-title fs-5" id="modalAbout">Acerca de nosotros</h1>
+                                    </div>
+                                    <div class="modal-body text-center"><!--Contenido del modal-->
+                                        <p>Promoviendo la conciencia de la energía limpia en en Tuxtepec.
+                                        Somo un equipo inovador, buscando proporcionar una fuente de nergía limpia.
+                                        Nuestros servicios están garantizados</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger btn-gral"
+                                            data-bs-dismiss="modal"><b>Regresar</b></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="nav-link">
+                            <button type="button" class="btn btn-info btn-gral" data-bs-toggle="modal"
+                                data-bs-target="#modalLegal"><img
+                                    src="../tuxcomSolar/img/icons/file-earmark-person.svg">
+                                <b>Legal</b>
+                            </button>
+                        </a><!--Boton para abrir Acerca De-->
+                        <div class="modal fade" id="modalLegal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true"><!--Formato del modal-->
+                            <div class="modal-dialog"><!--Modal tipo dialogo-->
+                                <div class="modal-content"><!--Muestra el modal-->
+                                    <div class="modal-header"><!--Encabezado del modal-->
+                                        <h1 class="modal-title fs-5" id="modalLegal">Acerca de nosotros</h1>
+                                    </div>
+                                    <div class="modal-body text-center"><!--Contenido del modal-->
+                                        <p>...Contenido legales, contratos, formatos</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger btn-gral"
+                                            data-bs-dismiss="modal"><b>Regresar</b></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </li>
     </nav>
-    <div class="bg-dark text-light text-center h6 mb-4 rounded-4">
+
+    <div class="bg-dark text-light text-center h6 mb-4 p-1 rounded-4"><!--Contiene etiqueta desplazante-->
         <marquee>AHORRA ENERGÍA Y LIBRATE DE LA CFE CON TUXCOM SOLAR</marquee>
     </div>
+
     <div><!--Contiene una tabla-->
-        <table class="table table-borderless mb-4 w-75" style="margin: 0 auto;"><!--Tabla de cuatro columnas-->
+        <table class="table table-borderless mb-4 w-50" style="margin: 0 auto;"><!--Tabla de cuatro columnas-->
             <thead><!--Encabezado-->
                 <tr class="table-info font-t"><!--Fila principal-->
                     <th scope="col"></th>
@@ -130,21 +213,13 @@
             </tbody>
         </table>
     </div>
-    <div id="carouselExampleIndicators" class="text-center carousel slide"><!--Tarjetas dezlizantes-->
+
+    <div id="carouselExampleIndicators" class="text-center carousel slide"><!--Tarjetas deslizantes-->
         <div class="carousel-inner text-center">
-            <div class="carousel-item active">
-                <div class="card mb-4" style="width: 18rem; margin: 0 auto;"><img src="../tuxcomSolar/img/gral/solar_isla00.jpeg"
-                        class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Sistema Solar: Isla</h5>
-                        <p class="card-text">Instalación para ranchos o lugares aislados sin red eléctrica.</p>
-                        <a href="#" class="btn btn-success">¡Contrata Ya!</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card mb-4" style="width: 18rem; margin: 0 auto;"><img src="../tuxcomSolar/img/gral/solar_isla01.jpeg"
-                        class="card-img-top">
+
+            <div class="carousel-item active"><!--Tarjeta 3-->
+                <div class="card mb-4" style="width: 18rem; margin: 0 auto; width: 280px;"><img
+                        src="../tuxcomSolar/img/gral/panel00.jpg" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Sistema Solar: DUAL</h5>
                         <p class="card-text">Instalación de paneles solares, dejando la CFE para respaldo.</p>
@@ -152,7 +227,41 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev btn-prev" type="button" data-bs-target="#carouselExampleIndicators"
+
+            <div class="carousel-item"><!--Tarjeta 4-->
+                <div class="card mb-4" style="width: 18rem; margin: 0 auto; width: 280px;"><img
+                        src="../tuxcomSolar/img/gral/panel01.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Sistema Solar: DUAL</h5>
+                        <p class="card-text">Instalación de paneles solares, dejando la CFE para respaldo.</p>
+                        <a class="btn btn-success">Más información</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item"><!--Tarjeta 5-->
+                <div class="card mb-4" style="width: 18rem; margin: 0 auto; width: 280px;"><img
+                        src="../tuxcomSolar/img/gral/solar_isla00.jpeg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Sistema Solar: DUAL</h5>
+                        <p class="card-text">Instalación de paneles solares, dejando la CFE para respaldo.</p>
+                        <a class="btn btn-success">Más información</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item"><!--Tarjeta 6-->
+                <div class="card mb-4" style="width: 18rem; margin: 0 auto; width: 280px;"><img
+                        src="../tuxcomSolar/img/gral/solar_isla01.jpeg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Sistema Solar: DUAL</h5>
+                        <p class="card-text">Instalación de paneles solares, dejando la CFE para respaldo.</p>
+                        <a class="btn btn-success">Más información</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev btn-prev " type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -163,11 +272,13 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+    </div>
 
-        <div class="text-Bw bg-div mb-4">
-            <p>&copy; 2024 TUXCOM SOLAR</p>
-        </div>
-        <script src="../tuxcomSolar/bootstrap/js/bootstrap.min.js"></script>
+    <div class="text-Bw bg-div mb-4 text-center"><!--Copyright-->
+        <p>&copy; 2024 TUXCOM SOLAR</p>
+    </div>
+
+    <script src="../tuxcomSolar/bootstrap/js/bootstrap.min.js"></script><!--Bootstrap JS-->
 </body>
 
 </html>

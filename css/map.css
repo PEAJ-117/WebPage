@@ -1,0 +1,12 @@
+.map-res {
+    overflow: hidden;
+    padding-bottom: 50.25%;
+    position: relative;
+    height: 0;
+}
+
+.map iframe {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
